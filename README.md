@@ -166,8 +166,6 @@ Mở file `frontend/index.html` bằng **VS Code Live Server**:
 
 Frontend chạy tại: `http://127.0.0.1:5500/frontend/index.html`
 
-> Phải dùng Live Server (HTTP), không mở trực tiếp file (`file:///`) vì sẽ bị lỗi CORS.
-
 ---
 
 ## Test nhanh
@@ -189,4 +187,4 @@ psql -U postgres -d notesapp -c "SELECT * FROM notes;"
 
 ## Video demo
 
-> Linh video demo: 
+> [Link video demo](https://drive.google.com/drive/folders/1WHWpaGUpsd1-WAtxcr5ldSVqXpvmTiAO)
