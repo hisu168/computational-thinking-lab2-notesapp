@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NotesApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="app-header">
+    <h1>NotesApp</h1>
+    <p class="subtitle">Ghi chú cá nhân, bảo mật với Firebase</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Panel 1: Login -->
+    <section id="login-panel" class="card">
+      <h2>Đăng nhập</h2>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@email.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" placeholder="••••••••" />
+      </div>
+
+      <div id="login-error" class="error-msg hidden"></div>
+
+      <button id="btn-login" class="btn btn-primary">Đăng nhập</button>
+    </section>
+
+    <!-- Panel 2: App -->
+    <section id="app-panel" class="hidden">
+
+      <!-- User info + Logout -->
+      <div class="card user-info-card">
+        <div class="user-info">
+          <div>
+            <p class="user-label">Đang đăng nhập</p>
+            <p id="user-email" class="user-email">—</p>
+            <p id="user-uid" class="user-uid">UID: —</p>
+          </div>
+          <button id="btn-logout" class="btn btn-secondary">Đăng xuất</button>
+        </div>
+      </div>
+
+      <!-- Form tạo note -->
+      <div class="card">
+        <h2>Tạo ghi chú mới</h2>
+        <div class="form-group">
+          <textarea
+            id="note-content"
+            rows="3"
+            placeholder="Nhập nội dung ghi chú..."
+          ></textarea>
+        </div>
+        <div id="note-error" class="error-msg hidden"></div>
+        <button id="btn-save" class="btn btn-primary">Lưu ghi chú</button>
+      </div>
+
+      <!-- Danh sách notes -->
+      <div class="card">
+        <div class="notes-header">
+          <h2>Ghi chú của bạn</h2>
+          <span id="notes-count" class="badge">0</span>
+        </div>
+
+        <div id="notes-loading" class="loading-msg">Đang tải...</div>
+        <div id="notes-empty" class="empty-msg hidden">Chưa có ghi chú nào.</div>
+        <ul id="notes-list" class="notes-list"></ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <p>NotesApp | Lab 2 | Computational Thinking</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
