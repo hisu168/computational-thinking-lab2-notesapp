@@ -57,7 +57,7 @@ notesapp/
 ### 1. Clone repository
 
 ```bash
-git clone <GITHUB_REPO_URL>
+git clone https://github.com/hisu168/computational-thinking-lab2-notesapp
 cd notesapp
 ```
 
